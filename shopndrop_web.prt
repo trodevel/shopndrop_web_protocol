@@ -1,0 +1,196 @@
+############################################################
+#
+# Shopndrop Protocol messages.
+#
+# Copyright (C) 2019 Sergey Kolevatov
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+# $Revision: 13581 $ $Date:: 2020-08-29 #$ $Author: serge $
+
+############################################################
+
+protocol shopndrop_web
+
+############################################################
+
+base shopndrop_protocol
+
+use basic_objects
+
+############################################################
+
+extern generic_protocol::BackwardMessage
+extern shopndrop_protocol::Request string
+
+# **************************************************
+# * OBJECTS
+# **************************************************
+
+obj ProductItemWithId
+
+    uint32          product_item_id
+    o shopndrop_protocol::ProductItem     product_item
+
+obj_end
+
+obj ShoppingItemWithProduct
+
+    o shopndrop_protocol::ShoppingItem    shopping_item
+    o shopndrop_protocol::ProductItem     product_item
+
+obj_end
+
+obj ShoppingListWithProduct
+
+    array<o ShoppingItemWithProduct>   items
+
+obj_end
+
+obj ShoppingListWithTotals
+
+    o ShoppingListWithProduct    shopping_list
+    double          price
+    double          weight
+
+obj_end
+
+obj RideSummaryWithShopper
+
+    uint32          ride_id
+    o shopndrop_protocol::RideSummary     ride
+    string          shopper_name
+
+obj_end
+
+obj RideWithId
+
+    uint32          ride_id
+    o shopndrop_protocol::Ride            ride
+
+obj_end
+
+obj ShoppingRequestInfo
+
+    uint32          order_id
+    double          sum
+    double          earning
+    double          weight
+    o shopndrop_protocol::Address         address
+
+obj_end
+
+obj AcceptedOrderUser
+
+    uint32          order_id
+    o basic_objects::LocalTime delivery_time
+    o shopndrop_protocol::Order           order
+    double          sum
+    string          shopper_name
+
+obj_end
+
+obj AcceptedOrderShopper
+
+    uint32          order_id
+    o basic_objects::LocalTime delivery_time
+    o shopndrop_protocol::Order           order
+    double          sum
+    double          earning
+    double          weight
+
+obj_end
+
+obj DashScreenUser
+
+    o basic_objects::LocalTime        current_time
+
+    array<o RideSummaryWithShopper> rides
+    array<o AcceptedOrderUser>      orders
+
+obj_end
+
+obj DashScreenShopper
+
+    o basic_objects::LocalTime        current_time
+
+    array<o RideWithId>             rides
+    array<o AcceptedOrderShopper>   orders
+
+obj_end
+
+# **************************************************
+# * REQUESTS
+# **************************************************
+
+msg GetProductItemListRequest: shopndrop_protocol::Request
+
+msg_end
+
+msg GetProductItemListResponse: generic_protocol::BackwardMessage
+
+    array<o ProductItemWithId>  product_items
+
+msg_end
+
+msg GetShoppingRequestInfoRequest: shopndrop_protocol::Request
+
+    uint32          ride_id
+
+msg_end
+
+msg GetShoppingRequestInfoResponse: generic_protocol::BackwardMessage
+
+    array<o ShoppingRequestInfo>    requests
+
+msg_end
+
+msg GetShoppingListWithTotalsRequest: shopndrop_protocol::Request
+
+    uint32          shopping_list_id
+
+msg_end
+
+msg GetShoppingListWithTotalsResponse: generic_protocol::BackwardMessage
+
+    o ShoppingListWithTotals  shopping_list
+
+msg_end
+
+msg GetDashScreenUserRequest: shopndrop_protocol::Request
+
+    uint32          user_id
+    o shopndrop_protocol::GeoPosition     position
+
+msg_end
+
+msg GetDashScreenUserResponse: generic_protocol::BackwardMessage
+
+    o DashScreenUser  dash_screen
+
+msg_end
+
+msg GetDashScreenShopperRequest: shopndrop_protocol::Request
+
+    uint32          user_id
+    o shopndrop_protocol::GeoPosition     position
+
+msg_end
+
+msg GetDashScreenShopperResponse: generic_protocol::BackwardMessage
+
+    o DashScreenShopper   dash_screen
+
+msg_end
