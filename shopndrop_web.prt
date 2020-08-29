@@ -18,7 +18,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-# $Revision: 13581 $ $Date:: 2020-08-29 #$ $Author: serge $
+# $Revision: 13582 $ $Date:: 2020-08-29 #$ $Author: serge $
 
 ############################################################
 
@@ -28,6 +28,7 @@ protocol shopndrop_web
 
 base shopndrop_protocol
 
+use generic_protocol
 use basic_objects
 
 ############################################################
