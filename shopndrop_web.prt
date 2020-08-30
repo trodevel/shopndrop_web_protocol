@@ -18,7 +18,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-# $Revision: 13582 $ $Date:: 2020-08-29 #$ $Author: serge $
+# $Revision: 13584 $ $Date:: 2020-08-31 #$ $Author: serge $
 
 ############################################################
 
@@ -148,7 +148,7 @@ msg_end
 
 msg GetShoppingRequestInfoRequest: shopndrop_protocol::Request
 
-    uint32          ride_id
+    uint32          ride_id : [1,)
 
 msg_end
 
@@ -160,7 +160,7 @@ msg_end
 
 msg GetShoppingListWithTotalsRequest: shopndrop_protocol::Request
 
-    uint32          shopping_list_id
+    uint32          shopping_list_id : [1,)
 
 msg_end
 
@@ -172,7 +172,7 @@ msg_end
 
 msg GetDashScreenUserRequest: shopndrop_protocol::Request
 
-    uint32          user_id
+    uint32          user_id : [1,)
     o shopndrop_protocol::GeoPosition     position
 
 msg_end
@@ -185,7 +185,7 @@ msg_end
 
 msg GetDashScreenShopperRequest: shopndrop_protocol::Request
 
-    uint32          user_id
+    uint32          user_id : [1,)
     o shopndrop_protocol::GeoPosition     position
 
 msg_end
