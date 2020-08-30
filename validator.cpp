@@ -147,7 +147,7 @@ bool validate( const GetShoppingRequestInfoRequest & r )
     // base class
     ::shopndrop_protocol::validator::validate( static_cast<const shopndrop_protocol::Request&>( r ) );
 
-    validate( "RIDE_ID", r.ride_id );
+    validate( "RIDE_ID", r.ride_id, true, true, static_cast<uint32_t>( 1 ), false, false, static_cast<uint32_t>( 0 ) );
 
     return true;
 }
@@ -167,7 +167,7 @@ bool validate( const GetShoppingListWithTotalsRequest & r )
     // base class
     ::shopndrop_protocol::validator::validate( static_cast<const shopndrop_protocol::Request&>( r ) );
 
-    validate( "SHOPPING_LIST_ID", r.shopping_list_id );
+    validate( "SHOPPING_LIST_ID", r.shopping_list_id, true, true, static_cast<uint32_t>( 1 ), false, false, static_cast<uint32_t>( 0 ) );
 
     return true;
 }
@@ -187,7 +187,7 @@ bool validate( const GetDashScreenUserRequest & r )
     // base class
     ::shopndrop_protocol::validator::validate( static_cast<const shopndrop_protocol::Request&>( r ) );
 
-    validate( "USER_ID", r.user_id );
+    validate( "USER_ID", r.user_id, true, true, static_cast<uint32_t>( 1 ), false, false, static_cast<uint32_t>( 0 ) );
     ::shopndrop_protocol::validator::validate( "POSITION", r.position );
 
     return true;
@@ -208,7 +208,7 @@ bool validate( const GetDashScreenShopperRequest & r )
     // base class
     ::shopndrop_protocol::validator::validate( static_cast<const shopndrop_protocol::Request&>( r ) );
 
-    validate( "USER_ID", r.user_id );
+    validate( "USER_ID", r.user_id, true, true, static_cast<uint32_t>( 1 ), false, false, static_cast<uint32_t>( 0 ) );
     ::shopndrop_protocol::validator::validate( "POSITION", r.position );
 
     return true;

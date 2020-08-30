@@ -134,7 +134,7 @@ struct GetShoppingRequestInfoRequest: public shopndrop_protocol::Request
         message_id = 410040161
     };
 
-    uint32_t             ride_id   ;
+    uint32_t             ride_id   ; // valid range: [1, +inf)
 };
 
 // Message
@@ -156,7 +156,7 @@ struct GetShoppingListWithTotalsRequest: public shopndrop_protocol::Request
         message_id = 2802146147
     };
 
-    uint32_t             shopping_list_id;
+    uint32_t             shopping_list_id; // valid range: [1, +inf)
 };
 
 // Message
@@ -178,7 +178,7 @@ struct GetDashScreenUserRequest: public shopndrop_protocol::Request
         message_id = 2366564411
     };
 
-    uint32_t             user_id   ;
+    uint32_t             user_id   ; // valid range: [1, +inf)
     shopndrop_protocol::GeoPosition position  ;
 };
 
@@ -201,7 +201,7 @@ struct GetDashScreenShopperRequest: public shopndrop_protocol::Request
         message_id = 2937124256
     };
 
-    uint32_t             user_id   ;
+    uint32_t             user_id   ; // valid range: [1, +inf)
     shopndrop_protocol::GeoPosition position  ;
 };
 

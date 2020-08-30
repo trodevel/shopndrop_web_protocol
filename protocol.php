@@ -135,7 +135,7 @@ class GetShoppingRequestInfoRequest extends \shopndrop_protocol\Request
 
     const MESSAGE_ID = 410040161;
 
-    public $ride_id             ; // type: uint32_t
+    public $ride_id             ; // type: uint32_t // valid range: [1, +inf)
 };
 
 // Message
@@ -161,7 +161,7 @@ class GetShoppingListWithTotalsRequest extends \shopndrop_protocol\Request
 
     const MESSAGE_ID = 2802146147;
 
-    public $shopping_list_id    ; // type: uint32_t
+    public $shopping_list_id    ; // type: uint32_t // valid range: [1, +inf)
 };
 
 // Message
@@ -187,7 +187,7 @@ class GetDashScreenUserRequest extends \shopndrop_protocol\Request
 
     const MESSAGE_ID = 2366564411;
 
-    public $user_id             ; // type: uint32_t
+    public $user_id             ; // type: uint32_t // valid range: [1, +inf)
     public $position            ; // type: shopndrop_protocol\GeoPosition
 };
 
@@ -214,7 +214,7 @@ class GetDashScreenShopperRequest extends \shopndrop_protocol\Request
 
     const MESSAGE_ID = 2937124256;
 
-    public $user_id             ; // type: uint32_t
+    public $user_id             ; // type: uint32_t // valid range: [1, +inf)
     public $position            ; // type: shopndrop_protocol\GeoPosition
 };
 
