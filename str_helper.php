@@ -15,7 +15,9 @@ require_once __DIR__.'/../basic_parser/str_helper.php';
 
 function to_string__ProductItemWithId( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " product_item_id=" . \basic_parser\to_string__int( $r->product_item_id );
     $res .= " product_item=" . \shopndrop_protocol\to_string__ProductItem( $r->product_item );
@@ -27,7 +29,9 @@ function to_string__ProductItemWithId( & $r )
 
 function to_string__ShoppingItemWithProduct( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " shopping_item=" . \shopndrop_protocol\to_string__ShoppingItem( $r->shopping_item );
     $res .= " product_item=" . \shopndrop_protocol\to_string__ProductItem( $r->product_item );
@@ -39,7 +43,9 @@ function to_string__ShoppingItemWithProduct( & $r )
 
 function to_string__ShoppingListWithProduct( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " items=" . \basic_parser\to_string__vector( $r->items, '\shopndrop_web_protocol\to_string__ShoppingItemWithProduct' ); // Array
 
@@ -50,7 +56,9 @@ function to_string__ShoppingListWithProduct( & $r )
 
 function to_string__ShoppingListWithTotals( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " shopping_list=" . to_string__ShoppingListWithProduct( $r->shopping_list );
     $res .= " price=" . \basic_parser\to_string__float( $r->price );
@@ -63,7 +71,9 @@ function to_string__ShoppingListWithTotals( & $r )
 
 function to_string__RideSummaryWithShopper( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " ride_id=" . \basic_parser\to_string__int( $r->ride_id );
     $res .= " ride=" . \shopndrop_protocol\to_string__RideSummary( $r->ride );
@@ -76,7 +86,9 @@ function to_string__RideSummaryWithShopper( & $r )
 
 function to_string__RideWithId( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " ride_id=" . \basic_parser\to_string__int( $r->ride_id );
     $res .= " ride=" . \shopndrop_protocol\to_string__Ride( $r->ride );
@@ -88,7 +100,9 @@ function to_string__RideWithId( & $r )
 
 function to_string__ShoppingRequestInfo( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " order_id=" . \basic_parser\to_string__int( $r->order_id );
     $res .= " sum=" . \basic_parser\to_string__float( $r->sum );
@@ -103,7 +117,9 @@ function to_string__ShoppingRequestInfo( & $r )
 
 function to_string__AcceptedOrderUser( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " order_id=" . \basic_parser\to_string__int( $r->order_id );
     $res .= " delivery_time=" . \basic_objects\to_string__LocalTime( $r->delivery_time );
@@ -118,7 +134,9 @@ function to_string__AcceptedOrderUser( & $r )
 
 function to_string__AcceptedOrderShopper( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " order_id=" . \basic_parser\to_string__int( $r->order_id );
     $res .= " delivery_time=" . \basic_objects\to_string__LocalTime( $r->delivery_time );
@@ -134,7 +152,9 @@ function to_string__AcceptedOrderShopper( & $r )
 
 function to_string__DashScreenUser( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " current_time=" . \basic_objects\to_string__LocalTime( $r->current_time );
     $res .= " rides=" . \basic_parser\to_string__vector( $r->rides, '\shopndrop_web_protocol\to_string__RideSummaryWithShopper' ); // Array
@@ -147,7 +167,9 @@ function to_string__DashScreenUser( & $r )
 
 function to_string__DashScreenShopper( & $r )
 {
-    $res = "";    $res .= "(";
+    $res = "";
+
+    $res .= "(";
 
     $res .= " current_time=" . \basic_objects\to_string__LocalTime( $r->current_time );
     $res .= " rides=" . \basic_parser\to_string__vector( $r->rides, '\shopndrop_web_protocol\to_string__RideWithId' ); // Array
@@ -164,7 +186,9 @@ function to_string__DashScreenShopper( & $r )
 
 function to_string__GetProductItemListRequest( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \shopndrop_protocol\to_string__Request( $r );
 
 
@@ -173,7 +197,9 @@ function to_string__GetProductItemListRequest( & $r )
 
 function to_string__GetProductItemListResponse( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \generic_protocol\to_string__BackwardMessage( $r );
 
     $res .= " product_items=" . \basic_parser\to_string__vector( $r->product_items, '\shopndrop_web_protocol\to_string__ProductItemWithId' ); // Array
@@ -183,7 +209,9 @@ function to_string__GetProductItemListResponse( & $r )
 
 function to_string__GetShoppingRequestInfoRequest( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \shopndrop_protocol\to_string__Request( $r );
 
     $res .= " ride_id=" . \basic_parser\to_string__int( $r->ride_id );
@@ -193,7 +221,9 @@ function to_string__GetShoppingRequestInfoRequest( & $r )
 
 function to_string__GetShoppingRequestInfoResponse( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \generic_protocol\to_string__BackwardMessage( $r );
 
     $res .= " requests=" . \basic_parser\to_string__vector( $r->requests, '\shopndrop_web_protocol\to_string__ShoppingRequestInfo' ); // Array
@@ -203,7 +233,9 @@ function to_string__GetShoppingRequestInfoResponse( & $r )
 
 function to_string__GetShoppingListWithTotalsRequest( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \shopndrop_protocol\to_string__Request( $r );
 
     $res .= " shopping_list_id=" . \basic_parser\to_string__int( $r->shopping_list_id );
@@ -213,7 +245,9 @@ function to_string__GetShoppingListWithTotalsRequest( & $r )
 
 function to_string__GetShoppingListWithTotalsResponse( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \generic_protocol\to_string__BackwardMessage( $r );
 
     $res .= " shopping_list=" . to_string__ShoppingListWithTotals( $r->shopping_list );
@@ -223,7 +257,9 @@ function to_string__GetShoppingListWithTotalsResponse( & $r )
 
 function to_string__GetDashScreenUserRequest( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \shopndrop_protocol\to_string__Request( $r );
 
     $res .= " user_id=" . \basic_parser\to_string__int( $r->user_id );
@@ -234,7 +270,9 @@ function to_string__GetDashScreenUserRequest( & $r )
 
 function to_string__GetDashScreenUserResponse( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \generic_protocol\to_string__BackwardMessage( $r );
 
     $res .= " dash_screen=" . to_string__DashScreenUser( $r->dash_screen );
@@ -244,7 +282,9 @@ function to_string__GetDashScreenUserResponse( & $r )
 
 function to_string__GetDashScreenShopperRequest( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \shopndrop_protocol\to_string__Request( $r );
 
     $res .= " user_id=" . \basic_parser\to_string__int( $r->user_id );
@@ -255,7 +295,9 @@ function to_string__GetDashScreenShopperRequest( & $r )
 
 function to_string__GetDashScreenShopperResponse( & $r )
 {
-    $res = "";    // base class
+    $res = "";
+
+    // base class
     $res .= \generic_protocol\to_string__BackwardMessage( $r );
 
     $res .= " dash_screen=" . to_string__DashScreenShopper( $r->dash_screen );
