@@ -3,9 +3,10 @@
 namespace shopndrop_web_protocol;
 
 
-// includes
-require_once 'protocol.php';
+// base include
 require_once __DIR__.'/../shopndrop_protocol/object_initializer.php';
+// own includes
+require_once __DIR__.'/../shopndrop_web_protocol/protocol.php';
 
 // objects
 
@@ -510,7 +511,7 @@ function create__GetDashScreenShopperResponse(
     return $res;
 }
 
-# namespace_end shopndrop_web_protocol
+// namespace_end shopndrop_web_protocol
 
 
 ?>

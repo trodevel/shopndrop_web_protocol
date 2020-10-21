@@ -1,5 +1,5 @@
-#ifndef APG_SHOPNDROP_WEB__OBJECT_INITIALIZER_H
-#define APG_SHOPNDROP_WEB__OBJECT_INITIALIZER_H
+#ifndef APG_SHOPNDROP_WEB_PROTOCOL__OBJECT_INITIALIZER_H
+#define APG_SHOPNDROP_WEB_PROTOCOL__OBJECT_INITIALIZER_H
 
 // includes
 #include "protocol.h"
@@ -150,4 +150,4 @@ GetDashScreenShopperResponse * create_GetDashScreenShopperResponse(
 
 } // namespace shopndrop_web_protocol
 
-#endif // APG_SHOPNDROP_WEB__OBJECT_INITIALIZER_H
+#endif // APG_SHOPNDROP_WEB_PROTOCOL__OBJECT_INITIALIZER_H

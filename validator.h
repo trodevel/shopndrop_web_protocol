@@ -1,5 +1,5 @@
-#ifndef APG_SHOPNDROP_WEB__VALIDATOR_H
-#define APG_SHOPNDROP_WEB__VALIDATOR_H
+#ifndef APG_SHOPNDROP_WEB_PROTOCOL__VALIDATOR_H
+#define APG_SHOPNDROP_WEB_PROTOCOL__VALIDATOR_H
 
 // includes
 #include "protocol.h"
@@ -43,4 +43,4 @@ bool validate( const GetDashScreenShopperResponse & r );
 
 } // namespace shopndrop_web_protocol
 
-#endif // APG_SHOPNDROP_WEB__VALIDATOR_H
+#endif // APG_SHOPNDROP_WEB_PROTOCOL__VALIDATOR_H

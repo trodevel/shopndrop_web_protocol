@@ -109,7 +109,7 @@ class GetProductItemListRequest extends \shopndrop_protocol\Request
         parent::__construct();
     }
 
-    const MESSAGE_ID = 1871702310;
+    const MESSAGE_ID = 3200850434;
 };
 
 // Message
@@ -120,7 +120,7 @@ class GetProductItemListResponse extends \generic_protocol\BackwardMessage
         parent::__construct();
     }
 
-    const MESSAGE_ID = 2358384821;
+    const MESSAGE_ID = 2957032087;
 
     public $product_items       ; // type: array<ProductItemWithId>
 };
@@ -133,7 +133,7 @@ class GetShoppingRequestInfoRequest extends \shopndrop_protocol\Request
         parent::__construct();
     }
 
-    const MESSAGE_ID = 410040161;
+    const MESSAGE_ID = 3612690496;
 
     public $ride_id             ; // type: uint32_t // valid range: [1, +inf)
 };
@@ -146,7 +146,7 @@ class GetShoppingRequestInfoResponse extends \generic_protocol\BackwardMessage
         parent::__construct();
     }
 
-    const MESSAGE_ID = 1683829720;
+    const MESSAGE_ID = 687539833;
 
     public $requests            ; // type: array<ShoppingRequestInfo>
 };
@@ -159,7 +159,7 @@ class GetShoppingListWithTotalsRequest extends \shopndrop_protocol\Request
         parent::__construct();
     }
 
-    const MESSAGE_ID = 2802146147;
+    const MESSAGE_ID = 1185570382;
 
     public $shopping_list_id    ; // type: uint32_t // valid range: [1, +inf)
 };
@@ -172,7 +172,7 @@ class GetShoppingListWithTotalsResponse extends \generic_protocol\BackwardMessag
         parent::__construct();
     }
 
-    const MESSAGE_ID = 2330732312;
+    const MESSAGE_ID = 3486700648;
 
     public $shopping_list       ; // type: ShoppingListWithTotals
 };
@@ -185,7 +185,7 @@ class GetDashScreenUserRequest extends \shopndrop_protocol\Request
         parent::__construct();
     }
 
-    const MESSAGE_ID = 2366564411;
+    const MESSAGE_ID = 1889156511;
 
     public $user_id             ; // type: uint32_t // valid range: [1, +inf)
     public $position            ; // type: shopndrop_protocol\GeoPosition
@@ -199,7 +199,7 @@ class GetDashScreenUserResponse extends \generic_protocol\BackwardMessage
         parent::__construct();
     }
 
-    const MESSAGE_ID = 4017550701;
+    const MESSAGE_ID = 1043334729;
 
     public $dash_screen         ; // type: DashScreenUser
 };
@@ -212,7 +212,7 @@ class GetDashScreenShopperRequest extends \shopndrop_protocol\Request
         parent::__construct();
     }
 
-    const MESSAGE_ID = 2937124256;
+    const MESSAGE_ID = 2051827430;
 
     public $user_id             ; // type: uint32_t // valid range: [1, +inf)
     public $position            ; // type: shopndrop_protocol\GeoPosition
@@ -226,12 +226,12 @@ class GetDashScreenShopperResponse extends \generic_protocol\BackwardMessage
         parent::__construct();
     }
 
-    const MESSAGE_ID = 2290721212;
+    const MESSAGE_ID = 400759178;
 
     public $dash_screen         ; // type: DashScreenShopper
 };
 
-# namespace_end shopndrop_web_protocol
+// namespace_end shopndrop_web_protocol
 
 
 ?>

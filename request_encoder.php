@@ -3,8 +3,9 @@
 namespace shopndrop_web_protocol;
 
 
-// includes
+// base include
 require_once __DIR__.'/../shopndrop_protocol/request_encoder.php';
+// includes
 require_once __DIR__.'/../generic_protocol/request_encoder.php';
 require_once __DIR__.'/../basic_objects/request_encoder.php';
 require_once __DIR__.'/../basic_parser/request_encoder.php';
@@ -132,7 +133,7 @@ function to_generic_request__DashScreenShopper( $prefix, & $r )
 function to_generic_request__GetProductItemListRequest( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetProductItemListRequest" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetProductItemListRequest" );
 
     // base class
     $res .= \shopndrop_protocol\to_generic_request__Request( $r );
@@ -144,7 +145,7 @@ function to_generic_request__GetProductItemListRequest( & $r )
 function to_generic_request__GetProductItemListResponse( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetProductItemListResponse" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetProductItemListResponse" );
 
     // base class
     $res .= \generic_protocol\to_generic_request__BackwardMessage( $r );
@@ -157,7 +158,7 @@ function to_generic_request__GetProductItemListResponse( & $r )
 function to_generic_request__GetShoppingRequestInfoRequest( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetShoppingRequestInfoRequest" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetShoppingRequestInfoRequest" );
 
     // base class
     $res .= \shopndrop_protocol\to_generic_request__Request( $r );
@@ -170,7 +171,7 @@ function to_generic_request__GetShoppingRequestInfoRequest( & $r )
 function to_generic_request__GetShoppingRequestInfoResponse( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetShoppingRequestInfoResponse" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetShoppingRequestInfoResponse" );
 
     // base class
     $res .= \generic_protocol\to_generic_request__BackwardMessage( $r );
@@ -183,7 +184,7 @@ function to_generic_request__GetShoppingRequestInfoResponse( & $r )
 function to_generic_request__GetShoppingListWithTotalsRequest( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetShoppingListWithTotalsRequest" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetShoppingListWithTotalsRequest" );
 
     // base class
     $res .= \shopndrop_protocol\to_generic_request__Request( $r );
@@ -196,7 +197,7 @@ function to_generic_request__GetShoppingListWithTotalsRequest( & $r )
 function to_generic_request__GetShoppingListWithTotalsResponse( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetShoppingListWithTotalsResponse" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetShoppingListWithTotalsResponse" );
 
     // base class
     $res .= \generic_protocol\to_generic_request__BackwardMessage( $r );
@@ -209,7 +210,7 @@ function to_generic_request__GetShoppingListWithTotalsResponse( & $r )
 function to_generic_request__GetDashScreenUserRequest( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetDashScreenUserRequest" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetDashScreenUserRequest" );
 
     // base class
     $res .= \shopndrop_protocol\to_generic_request__Request( $r );
@@ -223,7 +224,7 @@ function to_generic_request__GetDashScreenUserRequest( & $r )
 function to_generic_request__GetDashScreenUserResponse( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetDashScreenUserResponse" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetDashScreenUserResponse" );
 
     // base class
     $res .= \generic_protocol\to_generic_request__BackwardMessage( $r );
@@ -236,7 +237,7 @@ function to_generic_request__GetDashScreenUserResponse( & $r )
 function to_generic_request__GetDashScreenShopperRequest( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetDashScreenShopperRequest" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetDashScreenShopperRequest" );
 
     // base class
     $res .= \shopndrop_protocol\to_generic_request__Request( $r );
@@ -250,7 +251,7 @@ function to_generic_request__GetDashScreenShopperRequest( & $r )
 function to_generic_request__GetDashScreenShopperResponse( & $r )
 {
     // name
-    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web/GetDashScreenShopperResponse" );
+    $res = \basic_parser\to_generic_request__string( "CMD", "shopndrop_web_protocol/GetDashScreenShopperResponse" );
 
     // base class
     $res .= \generic_protocol\to_generic_request__BackwardMessage( $r );
@@ -289,7 +290,7 @@ function to_generic_request( $obj )
     return \shopndrop_protocol\to_generic_request( $obj );
 }
 
-# namespace_end shopndrop_web_protocol
+// namespace_end shopndrop_web_protocol
 
 
 ?>

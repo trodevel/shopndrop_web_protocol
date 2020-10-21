@@ -3,8 +3,9 @@
 namespace shopndrop_web_protocol;
 
 
-// includes
+// base include
 require_once __DIR__.'/../shopndrop_protocol/parser.php';
+// includes
 require_once __DIR__.'/../generic_protocol/parser.php';
 require_once __DIR__.'/../basic_objects/parser.php';
 require_once __DIR__.'/../basic_parser/parser.php';
@@ -293,16 +294,16 @@ protected static function parse_csv_array( $csv_arr )
 
     $handler_map = array(
         // messages
-        'shopndrop_web/GetProductItemListRequest'         => 'parse__GetProductItemListRequest',
-        'shopndrop_web/GetProductItemListResponse'         => 'parse__GetProductItemListResponse',
-        'shopndrop_web/GetShoppingRequestInfoRequest'         => 'parse__GetShoppingRequestInfoRequest',
-        'shopndrop_web/GetShoppingRequestInfoResponse'         => 'parse__GetShoppingRequestInfoResponse',
-        'shopndrop_web/GetShoppingListWithTotalsRequest'         => 'parse__GetShoppingListWithTotalsRequest',
-        'shopndrop_web/GetShoppingListWithTotalsResponse'         => 'parse__GetShoppingListWithTotalsResponse',
-        'shopndrop_web/GetDashScreenUserRequest'         => 'parse__GetDashScreenUserRequest',
-        'shopndrop_web/GetDashScreenUserResponse'         => 'parse__GetDashScreenUserResponse',
-        'shopndrop_web/GetDashScreenShopperRequest'         => 'parse__GetDashScreenShopperRequest',
-        'shopndrop_web/GetDashScreenShopperResponse'         => 'parse__GetDashScreenShopperResponse',
+        'shopndrop_web_protocol/GetProductItemListRequest'         => 'parse__GetProductItemListRequest',
+        'shopndrop_web_protocol/GetProductItemListResponse'         => 'parse__GetProductItemListResponse',
+        'shopndrop_web_protocol/GetShoppingRequestInfoRequest'         => 'parse__GetShoppingRequestInfoRequest',
+        'shopndrop_web_protocol/GetShoppingRequestInfoResponse'         => 'parse__GetShoppingRequestInfoResponse',
+        'shopndrop_web_protocol/GetShoppingListWithTotalsRequest'         => 'parse__GetShoppingListWithTotalsRequest',
+        'shopndrop_web_protocol/GetShoppingListWithTotalsResponse'         => 'parse__GetShoppingListWithTotalsResponse',
+        'shopndrop_web_protocol/GetDashScreenUserRequest'         => 'parse__GetDashScreenUserRequest',
+        'shopndrop_web_protocol/GetDashScreenUserResponse'         => 'parse__GetDashScreenUserResponse',
+        'shopndrop_web_protocol/GetDashScreenShopperRequest'         => 'parse__GetDashScreenShopperRequest',
+        'shopndrop_web_protocol/GetDashScreenShopperResponse'         => 'parse__GetDashScreenShopperResponse',
     );
 
     $type = $csv_arr[0][0];
@@ -318,7 +319,7 @@ protected static function parse_csv_array( $csv_arr )
 
 }
 
-# namespace_end shopndrop_web_protocol
+// namespace_end shopndrop_web_protocol
 
 
 ?>

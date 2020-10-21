@@ -129,7 +129,7 @@ std::ostream & write( std::ostream & os, const DashScreenShopper & r )
 
 std::ostream & write( std::ostream & os, const GetProductItemListRequest & r )
 {
-    write( os, std::string( "shopndrop_web/GetProductItemListRequest" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetProductItemListRequest" ) );
 
     // base class
     ::shopndrop_protocol::csv_helper::write( os, static_cast<const shopndrop_protocol::Request&>( r ) );
@@ -140,7 +140,7 @@ std::ostream & write( std::ostream & os, const GetProductItemListRequest & r )
 
 std::ostream & write( std::ostream & os, const GetProductItemListResponse & r )
 {
-    write( os, std::string( "shopndrop_web/GetProductItemListResponse" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetProductItemListResponse" ) );
 
     // base class
     ::generic_protocol::csv_helper::write( os, static_cast<const generic_protocol::BackwardMessage&>( r ) );
@@ -152,7 +152,7 @@ std::ostream & write( std::ostream & os, const GetProductItemListResponse & r )
 
 std::ostream & write( std::ostream & os, const GetShoppingRequestInfoRequest & r )
 {
-    write( os, std::string( "shopndrop_web/GetShoppingRequestInfoRequest" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetShoppingRequestInfoRequest" ) );
 
     // base class
     ::shopndrop_protocol::csv_helper::write( os, static_cast<const shopndrop_protocol::Request&>( r ) );
@@ -164,7 +164,7 @@ std::ostream & write( std::ostream & os, const GetShoppingRequestInfoRequest & r
 
 std::ostream & write( std::ostream & os, const GetShoppingRequestInfoResponse & r )
 {
-    write( os, std::string( "shopndrop_web/GetShoppingRequestInfoResponse" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetShoppingRequestInfoResponse" ) );
 
     // base class
     ::generic_protocol::csv_helper::write( os, static_cast<const generic_protocol::BackwardMessage&>( r ) );
@@ -176,7 +176,7 @@ std::ostream & write( std::ostream & os, const GetShoppingRequestInfoResponse & 
 
 std::ostream & write( std::ostream & os, const GetShoppingListWithTotalsRequest & r )
 {
-    write( os, std::string( "shopndrop_web/GetShoppingListWithTotalsRequest" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetShoppingListWithTotalsRequest" ) );
 
     // base class
     ::shopndrop_protocol::csv_helper::write( os, static_cast<const shopndrop_protocol::Request&>( r ) );
@@ -188,7 +188,7 @@ std::ostream & write( std::ostream & os, const GetShoppingListWithTotalsRequest 
 
 std::ostream & write( std::ostream & os, const GetShoppingListWithTotalsResponse & r )
 {
-    write( os, std::string( "shopndrop_web/GetShoppingListWithTotalsResponse" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetShoppingListWithTotalsResponse" ) );
 
     // base class
     ::generic_protocol::csv_helper::write( os, static_cast<const generic_protocol::BackwardMessage&>( r ) );
@@ -200,7 +200,7 @@ std::ostream & write( std::ostream & os, const GetShoppingListWithTotalsResponse
 
 std::ostream & write( std::ostream & os, const GetDashScreenUserRequest & r )
 {
-    write( os, std::string( "shopndrop_web/GetDashScreenUserRequest" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetDashScreenUserRequest" ) );
 
     // base class
     ::shopndrop_protocol::csv_helper::write( os, static_cast<const shopndrop_protocol::Request&>( r ) );
@@ -213,7 +213,7 @@ std::ostream & write( std::ostream & os, const GetDashScreenUserRequest & r )
 
 std::ostream & write( std::ostream & os, const GetDashScreenUserResponse & r )
 {
-    write( os, std::string( "shopndrop_web/GetDashScreenUserResponse" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetDashScreenUserResponse" ) );
 
     // base class
     ::generic_protocol::csv_helper::write( os, static_cast<const generic_protocol::BackwardMessage&>( r ) );
@@ -225,7 +225,7 @@ std::ostream & write( std::ostream & os, const GetDashScreenUserResponse & r )
 
 std::ostream & write( std::ostream & os, const GetDashScreenShopperRequest & r )
 {
-    write( os, std::string( "shopndrop_web/GetDashScreenShopperRequest" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetDashScreenShopperRequest" ) );
 
     // base class
     ::shopndrop_protocol::csv_helper::write( os, static_cast<const shopndrop_protocol::Request&>( r ) );
@@ -238,7 +238,7 @@ std::ostream & write( std::ostream & os, const GetDashScreenShopperRequest & r )
 
 std::ostream & write( std::ostream & os, const GetDashScreenShopperResponse & r )
 {
-    write( os, std::string( "shopndrop_web/GetDashScreenShopperResponse" ) );
+    write( os, std::string( "shopndrop_web_protocol/GetDashScreenShopperResponse" ) );
 
     // base class
     ::generic_protocol::csv_helper::write( os, static_cast<const generic_protocol::BackwardMessage&>( r ) );

@@ -1,5 +1,5 @@
-#ifndef APG_SHOPNDROP_WEB__DUMMY_CREATOR_H
-#define APG_SHOPNDROP_WEB__DUMMY_CREATOR_H
+#ifndef APG_SHOPNDROP_WEB_PROTOCOL__DUMMY_CREATOR_H
+#define APG_SHOPNDROP_WEB_PROTOCOL__DUMMY_CREATOR_H
 
 // includes
 #include "protocol.h"
@@ -44,4 +44,4 @@ GetDashScreenShopperResponse * create__GetDashScreenShopperResponse();
 
 } // namespace shopndrop_web_protocol
 
-#endif // APG_SHOPNDROP_WEB__DUMMY_CREATOR_H
+#endif // APG_SHOPNDROP_WEB_PROTOCOL__DUMMY_CREATOR_H

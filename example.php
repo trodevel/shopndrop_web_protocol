@@ -3,11 +3,11 @@
 namespace shopndrop_web_protocol;
 
 
-// includes
-require_once 'protocol.php';
-require_once 'dummy_creator.php';
-require_once 'str_helper.php';
-require_once 'request_encoder.php';
+// own includes
+require_once __DIR__.'/../shopndrop_web_protocol/protocol.php';
+require_once __DIR__.'/../shopndrop_web_protocol/dummy_creator.php';
+require_once __DIR__.'/../shopndrop_web_protocol/str_helper.php';
+require_once __DIR__.'/../shopndrop_web_protocol/request_encoder.php';
 
 # objects
 
@@ -222,7 +222,7 @@ function example_GetDashScreenShopperResponse()
 
 }
 
-# namespace_end shopndrop_web_protocol
+// namespace_end shopndrop_web_protocol
 
 
 ?>

@@ -3,8 +3,9 @@
 namespace shopndrop_web_protocol;
 
 
-// includes
+// base include
 require_once __DIR__.'/../shopndrop_protocol/str_helper.php';
+// includes
 require_once __DIR__.'/../generic_protocol/str_helper.php';
 require_once __DIR__.'/../basic_objects/str_helper.php';
 require_once __DIR__.'/../basic_parser/str_helper.php';
@@ -346,7 +347,7 @@ function to_string( $obj )
     return \shopndrop_protocol\to_string( $obj );
 }
 
-# namespace_end shopndrop_web_protocol
+// namespace_end shopndrop_web_protocol
 
 
 ?>

@@ -1,5 +1,5 @@
-#ifndef APG_SHOPNDROP_WEB__CSV_HELPER_H
-#define APG_SHOPNDROP_WEB__CSV_HELPER_H
+#ifndef APG_SHOPNDROP_WEB_PROTOCOL__CSV_HELPER_H
+#define APG_SHOPNDROP_WEB_PROTOCOL__CSV_HELPER_H
 
 // system includes
 #include <sstream>
@@ -59,4 +59,4 @@ std::string to_csv( const T & l )
 
 } // namespace shopndrop_web_protocol
 
-#endif // APG_SHOPNDROP_WEB__CSV_HELPER_H
+#endif // APG_SHOPNDROP_WEB_PROTOCOL__CSV_HELPER_H

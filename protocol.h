@@ -1,5 +1,5 @@
-#ifndef APG_SHOPNDROP_WEB__PROTOCOL_H
-#define APG_SHOPNDROP_WEB__PROTOCOL_H
+#ifndef APG_SHOPNDROP_WEB_PROTOCOL__PROTOCOL_H
+#define APG_SHOPNDROP_WEB_PROTOCOL__PROTOCOL_H
 
 // system includes
 #include <vector>
@@ -111,7 +111,7 @@ struct GetProductItemListRequest: public shopndrop_protocol::Request
 {
     enum
     {
-        message_id = 1871702310
+        message_id = 3200850434
     };
 };
 
@@ -120,7 +120,7 @@ struct GetProductItemListResponse: public generic_protocol::BackwardMessage
 {
     enum
     {
-        message_id = 2358384821
+        message_id = 2957032087
     };
 
     std::vector<ProductItemWithId> product_items;
@@ -131,7 +131,7 @@ struct GetShoppingRequestInfoRequest: public shopndrop_protocol::Request
 {
     enum
     {
-        message_id = 410040161
+        message_id = 3612690496
     };
 
     uint32_t             ride_id   ; // valid range: [1, +inf)
@@ -142,7 +142,7 @@ struct GetShoppingRequestInfoResponse: public generic_protocol::BackwardMessage
 {
     enum
     {
-        message_id = 1683829720
+        message_id = 687539833
     };
 
     std::vector<ShoppingRequestInfo> requests  ;
@@ -153,7 +153,7 @@ struct GetShoppingListWithTotalsRequest: public shopndrop_protocol::Request
 {
     enum
     {
-        message_id = 2802146147
+        message_id = 1185570382
     };
 
     uint32_t             shopping_list_id; // valid range: [1, +inf)
@@ -164,7 +164,7 @@ struct GetShoppingListWithTotalsResponse: public generic_protocol::BackwardMessa
 {
     enum
     {
-        message_id = 2330732312
+        message_id = 3486700648
     };
 
     ShoppingListWithTotals shopping_list;
@@ -175,7 +175,7 @@ struct GetDashScreenUserRequest: public shopndrop_protocol::Request
 {
     enum
     {
-        message_id = 2366564411
+        message_id = 1889156511
     };
 
     uint32_t             user_id   ; // valid range: [1, +inf)
@@ -187,7 +187,7 @@ struct GetDashScreenUserResponse: public generic_protocol::BackwardMessage
 {
     enum
     {
-        message_id = 4017550701
+        message_id = 1043334729
     };
 
     DashScreenUser       dash_screen;
@@ -198,7 +198,7 @@ struct GetDashScreenShopperRequest: public shopndrop_protocol::Request
 {
     enum
     {
-        message_id = 2937124256
+        message_id = 2051827430
     };
 
     uint32_t             user_id   ; // valid range: [1, +inf)
@@ -210,7 +210,7 @@ struct GetDashScreenShopperResponse: public generic_protocol::BackwardMessage
 {
     enum
     {
-        message_id = 2290721212
+        message_id = 400759178
     };
 
     DashScreenShopper    dash_screen;
@@ -218,5 +218,5 @@ struct GetDashScreenShopperResponse: public generic_protocol::BackwardMessage
 
 } // namespace shopndrop_web_protocol
 
-#endif // APG_SHOPNDROP_WEB__PROTOCOL_H
+#endif // APG_SHOPNDROP_WEB_PROTOCOL__PROTOCOL_H
 
